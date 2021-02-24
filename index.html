@@ -52,6 +52,7 @@
 </head>
 <body>
 		<h1>InfectedGriffon's site of dumb stuff</h1>		
+	<button class="closetablink" onclick="closePages()">X</button>
 	<button class="tablink" onclick="openPage('Home', this, 'lightblue')" id="defaultOpen">Home</button>
 	<button class="tablink" onclick="openPage('Todo', this, 'orange')">Todo</button>
 	<button class="tablink" onclick="openPage('Doggo', this, 'green')">Doggo</button>
@@ -103,6 +104,17 @@
 		}
 		document.getElementById(pageName).style.display = "block";
 		elmnt.style.backgroundColor = color;
+	}
+	function closePages() {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablink");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].style.backgroundColor = "";
+		}
 	}
 
 	// Get the element with id="defaultOpen" and click on it
