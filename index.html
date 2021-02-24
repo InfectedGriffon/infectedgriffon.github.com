@@ -52,6 +52,7 @@
 		<p>this is a dumb website where I figure out how HTML works...<br/>
 			honestly if you found this you're probably one of my friends.</p>
 		<div class="tab">
+			<button class="tablinks" onclick="closeTab()">X</button>
 			<button class="tablinks" onclick="openTab(event, 'Todo')">Todo list</button>
 			<button class="tablinks" onclick="openTab(event, 'Doggo')">Doggo</button>
 			<button class="tablinks" onclick="openTab(event, 'Youtube')">Youtube shows</button>
@@ -112,6 +113,15 @@
 		// Show the current tab, and add an "active" class to the button that opened the tab
 		document.getElementById(tabName).style.display = "block";
 		evt.currentTarget.className += " active";
+	} 
+	function closeTab() {
+		// Declare all variables
+		var i, tabcontent, tablinks;
+		// Get all elements with class="tabcontent" and hide them
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
 	} 
 	</script>
 </body>
