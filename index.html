@@ -72,10 +72,10 @@
 		.sidenav {padding-top: 15px;}
 		.sidenav a {font-size: 18px;}
 	}
-	.sticky {
-		position: -webkit-sticky;
-		position: sticky;
-		top: 0;
+	.sidenavbutton{
+		position: absolute;
+		float: right;
+		
 	}
 	</style>
 	<title>InfectedGriffon</title>
@@ -141,7 +141,7 @@
 		<a href="#">Clients</a>
 		<a href="#">Contact</a>
 	</div>
-	<span id="sticky" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; extra</span>
+	<span class="sidenavbutton" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; extra</span>
 	</div>
 	<script>
 	function openTab(evt, cityName) {
