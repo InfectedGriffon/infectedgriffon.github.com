@@ -30,7 +30,7 @@
 	  cursor: pointer;
 		padding: 14px 16px;
 		font-size: 17px;
-		width: 20%;
+		width: 15%;
 	}
 
 	.tablink:hover {
@@ -41,11 +41,9 @@
 	.tabcontent {
 		color: white;
 		display: none;
-		padding: 100px 20px;
-		margin-left: 10px;
-		margin-right: 10px;
-		height: 80%;
+		height: 100%;
 	}
+	#Home {background-color: lightblue;}
 	#Todo {background-color: orange;}
 	#Doggo {background-color: green;}
 	#Youtube {background-color: red;}
@@ -61,12 +59,18 @@
 </head>
 <body>
 		<h1>InfectedGriffon's site of dumb stuff</h1>		
-	<button class="tablink" onclick="openPage('Todo', this, 'orange')" id="defaultOpen">Todo</button>
+	<button class="tablink" onclick="openPage('Home', this, 'lightblue')" id="defaultOpen">Home</button>
+	<button class="tablink" onclick="openPage('Todo', this, 'orange')">Todo</button>
 	<button class="tablink" onclick="openPage('Doggo', this, 'green')">Doggo</button>
 	<button class="tablink" onclick="openPage('Youtube', this, 'red')">Youtube</button>
 	<button class="tablink" onclick="openPage('Windows93', this, 'purple')">Windows 93</button>
 	<button class="tablink" onclick="openPage('Discord', this, 'darkblue')">Discord</button>
-		
+	
+	<div id="Home" class="tabcontent">
+		<h3>Home</h3>
+		<p>Home text here</p>
+	</div>
+	
 	<div id="Todo" class="tabcontent">
 		<h3>Todo</h3>
 		<p>Todo list here</p>
