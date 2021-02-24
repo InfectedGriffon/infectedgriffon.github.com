@@ -42,10 +42,11 @@
 		padding: 100px 20px;
 		height: 100%;
 	}
-	#Home {background-color: red;}
-	#News {background-color: green;}
-	#Contact {background-color: blue;}
-	#About {background-color: orange;}
+	#Todo {background-color: red;}
+	#Doggo {background-color: green;}
+	#Youtube {background-color: blue;}
+	#Windows93 {background-color: orange;}
+	#Discord {background-color: orange;}
 	</style>
 	<title>InfectedGriffon</title>
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -56,32 +57,34 @@
 </head>
 <body>
 		<h1>InfectedGriffon's site of dumb stuff</h1>		
+	<button class="tablink" onclick="openPage('Todo', this, 'red')">Todo</button>
+	<button class="tablink" onclick="openPage('Doggo', this, 'green')" id="defaultOpen">Doggo</button>
+	<button class="tablink" onclick="openPage('Youtube', this, 'blue')">Youtube</button>
+	<button class="tablink" onclick="openPage('Windows93', this, 'orange')">Windows 93</button>
+	<button class="tablink" onclick="openPage('Discord', this, 'darkblue')">Discord</button>
 		
-	
-	
-	<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-	<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-	<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-	<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
-		
-	<div id="Home" class="tabcontent">
-		<h3>Home</h3>
-		<p>Home is where the heart is..</p>
+	<div id="Todo" class="tabcontent">
+		<h3>Todo</h3>
+		<p>Todo list here</p>
 	</div>
 
-	<div id="News" class="tabcontent">
-		<h3>News</h3>
-		<p>Some news this fine day!</p> 
+	<div id="Doggo" class="tabcontent">
+		<h3>Doggo</h3>
+		<p>Doggo image here</p> 
 	</div>
 
-	<div id="Contact" class="tabcontent">
-		<h3>Contact</h3>
-		<p>Get in touch, or swing by for a cup of coffee.</p>
+	<div id="Youtube" class="tabcontent">
+		<h3>Youtube</h3>
+		<p>Youtube list here</p>
 	</div>
 
-	<div id="About" class="tabcontent">
-		<h3>About</h3>
-		<p>Who we are and what we do.</p>
+	<div id="Windows93" class="tabcontent">
+		<h3>Windows 93</h3>
+		<p>Windows 93 link goes here</p>
+	</div>
+	<div id="discord" class="tabcontent">
+		<h3>Discord</h3>
+		<p>Discord link goes here</p>
 	</div>
 	<script>
 	function openPage(pageName,elmnt,color) {
