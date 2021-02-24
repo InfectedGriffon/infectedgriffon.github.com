@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+	#myProgress {
+		width: 100%;
+		background-color: grey;
+	}
+	#myBar {
+		width: 1%;
+		height: 30px;
+		background-color: green;
+	}
+	</style>
 	<title>InfectedGriffon</title>
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<meta name="description" content="dumb testing site for html and stuff">
@@ -27,6 +38,31 @@
 	</ol>  
 	<h3><a name="dog">look at this dog!!!</a></h3>
 	<img src="doggo.png" width="300">
+	
+	<div id="myProgress">
+		<div id="myBar"></div>
+	</div>
+	<script>
+	var i = 0;
+	function move() {
+		if (i == 0) {
+			i = 1;
+			var elem = document.getElementById("myBar");
+			var width = 1;
+			var id = setInterval(frame, 10);
+			function frame() {
+				if (width >= 100) {
+					clearInterval(id);
+					i = 0;
+				} else {
+					width++;
+					elem.style.width = width + "%";
+				}
+			}
+		}
+	}
+	</script>
+	
 	<h3><a name="youtube">also here are some things I am currently watching on youtube:</a></h3>
 	<ul>
 		<li><a href="https://www.youtube.com/playlist?list=PL24C8378F296DB656">Battle for Dream Island</a>
