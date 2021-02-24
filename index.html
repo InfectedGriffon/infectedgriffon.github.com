@@ -2,41 +2,12 @@
 <html>
 <head>
 	<style>
-	.main{
-	font-family: "comic sans";
-	}
 	h1{
 	text-align: center;
 	border: 3px solid orange;
 	}
 	.doggoimg{
 	border: 5px ridge red;
-	}
-	.tab {
-		overflow: hidden;
-		border: 1px solid #ccc;
-		background-color: #f1f1f1;
-	}
-	.tab button {
-		background-color: inherit;
-		float: left;
-		border: none;
-		outline: none;
-		cursor: pointer;
-		padding: 14px 16px;
-		transition: 0.3s;
-	}
-	.tab button:hover {
-		background-color: #ddd;
-	}
-	.tab button.active {
-		background-color: #ccc;
-	}
-	.tabcontent {
-		display: none;
-		padding: 6px 12px;
-		border: 1px solid #ccc;
-		border-top: none;
 	}
 	</style>
 	<title>InfectedGriffon</title>
@@ -47,87 +18,11 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-	<div id="main">
 		<h1>InfectedGriffon's site of dumb stuff</h1>
 		<p>This is a dumb website where I figure out how HTML works...<br/>
 			Honestly if you found this you're probably one of my friends.</p>
-		<div class="tab">
-			<button class="tablinks" onclick="closeTab()">X</button>
-			<button class="tablinks" onclick="openTab(event, 'Todo')">Todo list</button>
-			<button class="tablinks" onclick="openTab(event, 'Doggo')">Doggo</button>
-			<button class="tablinks" onclick="openTab(event, 'Youtube')">Youtube shows</button>
-			<button class="tablinks" onclick="openTab(event, 'Windows93')">Windows93</button>
-			<button class="tablinks" onclick="openTab(event, 'Discord')">Discord links</button>
-		</div>
-		<div>
-			<div id="Todo" class="tabcontent">
-				<h3><a name="todo">todo list:</a></h3>
-				<ol>
-					<li>display some memes</li>
-					<li>talk about Minecraft</li>
-					<li>Show my friends how cool I am</li>
-					<li>maybe a socials?</li>
-					<li>something with javascript</li>
-					<li>formatting</li>
-				</ol>  
-			</div>
-			<div id="Doggo" class="tabcontent">
-				<h3><a id="dogtext">DOGGO</a></h3>
-				<img class="doggoimg" src="doggo.png" width="300">
-			</div>
-			<div id="Youtube" class="tabcontent">
-				<h3><a name="youtube">Cool youtube shows</a></h3>
-				<ul>
-					<li><a href="https://www.youtube.com/playlist?list=PL24C8378F296DB656">Battle for Dream Island</a>
-						by <a href="https://www.youtube.com/channel/UCeKLuqGciqZZ5RFYk5CbqXg">JacknJellify</a></li>
-					<li><a href="https://www.youtube.com/playlist?list=PLhVW2_-wzAgL9jquMbLIwMWPYf--dZbFG">Ena</a>
-						by <a href="https://www.youtube.com/channel/UCmo3YHm8GaHk0ZWovjow65A">Joel G</a></li>
-					<li><a href="https://www.youtube.com/playlist?list=PLZ5VEKOKH8PCjZJYvjlinBtjjmKV_-dk1">Autodale</a>
-						by <a href="https://www.youtube.com/channel/UCBYChBOoVXAenGDYvl5-dAw">Dead Sound</a></li>
-				</ul>
-			</div>
-			<div id="Windows93" class="tabcontent">
-				<h3><a name="windows93">Windows 93</a></h3>
-				<a href="https://www.windows93.net">go to the website itself because iframes are hard...</a>
-			</div>	
-			<div id="Discord" class="tabcontent">
-				<h3><a name="Discord">Discord</a></h3>
-				<p>ok so my name on discord is hadean#8832 and my server is <a href="https://discord.gg/f9JwMWM2">this link</a></p>
-			</div>	
-		</div>
-	</div>
 	<script>
-	function openTab(evt, tabName) {
-		// Declare all variables
-		var i, tabcontent, tablinks;
-		// Get all elements with class="tabcontent" and hide them
-		tabcontent = document.getElementsByClassName("tabcontent");
-		for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-		}
-		// Get all elements with class="tablinks" and remove the class "active"
-		tablinks = document.getElementsByClassName("tablinks");
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}	
-		// Show the current tab, and add an "active" class to the button that opened the tab
-		document.getElementById(tabName).style.display = "block";
-		evt.currentTarget.className += " active";
-	} 
-	function closeTab() {
-		// Declare all variables
-		var i, tabcontent, tablinks;
-		// Get all elements with class="tabcontent" and hide them
-		tabcontent = document.getElementsByClassName("tabcontent");
-		for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-		}
-		// Get all elements with class="tablinks" and remove the class "active"
-		tablinks = document.getElementsByClassName("tablinks");
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-	} 
+	
 	</script>
 </body>
 </html>
