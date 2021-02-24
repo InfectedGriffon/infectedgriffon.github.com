@@ -12,14 +12,6 @@
 	border: 5px ridge red;
 	}
 	* {box-sizing: border-box}
-
-	<!--/* Set height of body and the document to 100% */
-	body, html {
-	  height: 100%;
-	  margin: 0;
-	  font-family: Arial;
-	}-->
-
 	/* Style tab links */
 	.tablink {
 	  background-color: #555;
@@ -43,6 +35,18 @@
 		display: none;
 		height: 80%;
 		padding: 20px;
+	}
+	a:link, a:visited {
+	  background-color: #f44336;
+	  color: white;
+	  padding: 15px 25px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	}
+
+	a:hover, a:active {
+	  background-color: red;
 	}
 	#Home {background-color: lightblue;}
 	#Todo {background-color: orange;}
@@ -71,19 +75,16 @@
 		<h3>Home</h3>
 		<p>Home text here</p>
 	</div>
-	
 	<div id="Todo" class="tabcontent">
 		<h3>Todo</h3>
 		<p>Todo list here</p>
 	</div>
-
 	<div id="Doggo" class="tabcontent">
 		<h3>Doggo</h3>
 		<p>Doggo image here</p> 
 	</div>
-
 	<div id="Youtube" class="tabcontent">
-		<h3><a name="youtube">Cool youtube shows</a></h3>
+		<h3>Cool youtube shows</h3>
 		<ul>
 			<li><a href="https://www.youtube.com/playlist?list=PL24C8378F296DB656">Battle for Dream Island</a>
 				by <a href="https://www.youtube.com/channel/UCeKLuqGciqZZ5RFYk5CbqXg">JacknJellify</a></li>
@@ -93,7 +94,6 @@
 				by <a href="https://www.youtube.com/channel/UCBYChBOoVXAenGDYvl5-dAw">Dead Sound</a></li>
 		</ul>
 	</div>
-
 	<div id="Windows93" class="tabcontent">
 		<h3>Windows 93</h3>
 		<p>Windows 93 link goes here</p>
