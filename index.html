@@ -8,6 +8,9 @@
 	h1{
 	text-align: center;
 	}
+	.doggoimg{
+	border: 5px solid black;
+	}
 	.tab {
 		overflow: hidden;
 		border: 1px solid #ccc;
@@ -40,22 +43,21 @@
 	<meta name="description" content="dumb testing site for html and stuff">
 	<meta name="author" content="InfectedGriffon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
 </head>
 <body>
 	<div id="main">
-	<h1>InfectedGriffon's site of dumb stuff</h1>
-	<p>this is a dumb website where I figure out how HTML works...<br/>
-		honestly if you found this you're probably one of my friends.</p>
-	<!-- Tab links -->
-	<div class="tab">
+		<h1>InfectedGriffon's site of dumb stuff</h1>
+		<p>this is a dumb website where I figure out how HTML works...<br/>
+			honestly if you found this you're probably one of my friends.</p>
+		<div class="tab">
 		<button class="tablinks" onclick="openTab(event, 'Todo')">Todo list</button>
 		<button class="tablinks" onclick="openTab(event, 'Doggo')">Doggo</button>
 		<button class="tablinks" onclick="openTab(event, 'Youtube')">Youtube shows</button>
 		<button class="tablinks" onclick="openTab(event, 'Windows93')">Windows93</button>
 		<button class="tablinks" onclick="openTab(event, 'Discord')">Discord links</button>
 	</div>
-	<!-- Tab content -->
-	<div id="Todo" class="tabcontent">
+		<div id="Todo" class="tabcontent">
 		<h3><a name="todo">todo list:</a></h3>
 		<ol>
 			<li>display some memes</li>
@@ -66,11 +68,11 @@
 			<li>formatting</li>
 		</ol>  
 	</div>
-	<div id="Doggo" class="tabcontent">
+		<div id="Doggo" class="tabcontent">
 		<h3><a name="dog">look at this dog!!!</a></h3>
-		<img src="doggo.png" width="300">
+		<img class="doggoimg" src="doggo.png" width="300">
 	</div>
-	<div id="Youtube" class="tabcontent">
+		<div id="Youtube" class="tabcontent">
 		<h3><a name="youtube">also here are some things I am currently watching on youtube:</a></h3>
 		<ul>
 			<li><a href="https://www.youtube.com/playlist?list=PL24C8378F296DB656">Battle for Dream Island</a>
@@ -83,11 +85,11 @@
 				by <a href="https://www.youtube.com/c/DeadSound">Dead Sound</a></li>
 		</ul>
 	</div>
-	<div id="Windows93" class="tabcontent">
+		<div id="Windows93" class="tabcontent">
 		<h3><a name="windows93">Windows 93</a></h3>
 		<a href="https://www.windows93.net">go to the website itself because iframes are hard...</a>
 	</div>	
-	<div id="Discord" class="tabcontent">
+		<div id="Discord" class="tabcontent">
 		<h3><a name="Discord">Discord</a></h3>
 		<p>ok so my name on discord is hadean#8832 and my server is <a href="https://discord.gg/f9JwMWM2">this link</a></p>
 	</div>	
