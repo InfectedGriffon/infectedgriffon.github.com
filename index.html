@@ -50,13 +50,27 @@
 <body>
 	<h1>Infected<wbr>Griffon's site of dumb stuff</h1>		
 	<div class="navbar">
-	  <div class="tablink home">Home</div>
-	  <div class="tablink todo">Todo</div>
-	  <div class="tablink doggo">Doggo</div>  
-	  <div class="tablink youtube">Youtube</div>
-	  <div class="tablink minecraft">Minecraft</div>
-	  <div class="tablink windows93">Windows 93</div>
-	  <div class="dropbtn socials">Socials</div>
+	  <div class="tablink home">
+		<button class="tablink" onclick="openPage('Home', this, 'lightblue')" id="defaultOpen">Home</button>
+	  </div>
+	  <div class="tablink todo">
+		<button class="tablink" onclick="openPage('Todo', this, 'orange')">Todo</button>
+	  </div>
+	  <div class="tablink doggo">
+		<button class="tablink" onclick="openPage('Doggo', this, 'lime')">Doggo</button>
+	  </div>  
+	  <div class="tablink youtube">
+	  	<button class="tablink" onclick="openPage('Youtube', this, 'red')">Youtube</button>
+	  </div>
+	  <div class="tablink minecraft">
+		<button class="tablink" onclick="openPage('Minecraft', this, 'green')">Minecraft</button>
+	  </div>
+	  <div class="tablink windows93">
+	  	<button class="tablink" onclick="openPage('Windows93', this, 'purple')">Windows 93</button>
+	  </div>
+	  <div class="tablink socials">
+		<button class="dropbtn">Socials</button>
+	  </div>
 	</div>
 </body>
 </html>
