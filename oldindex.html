@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.navbar {
+	  display: flex;
+	  flex-flow: row nowrap;
+	  justify-content: space-around;
+	  align-items: stretch;
+	}
+	.navbar > div {
+	  width: 100px;
+	  text-align: center;
+	  line-height: 75px;
+	  font-size: 30px;
+	  margin: 0px 1px;
+	}
+	.tablink{
+	flex-grow: 5
+	background-color: lightgray;
+	}
+	.home:hover{
+	background-color: lightblue;
+	}
+	.todo:hover{
+	background-color: orange;
+	}
+	.doggo:hover{
+	background-color: lime;
+	}
+	.youtube:hover{
+	background-color: red;
+	}
+	.minecraft:hover{
+	background-color: green;
+	}
+	.windows93:hover{
+	background-color: purple;
+	}
+	.socials:hover{
+	background-color: gray;
+	}
+	</style>
+	<title>InfectedGriffon</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	<meta name="description" content="dumb testing site for html and stuff">
+	<meta name="author" content="InfectedGriffon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>Infected<wbr>Griffon's site of dumb stuff</h1>
+	<div class="navbar">
+	  <div class="tablink home">
+		<button class="tablink" onclick="openPage('Home', this, 'lightblue')" id="defaultOpen">Home</button>
+	  </div>
+	  <div class="tablink todo">
+		<button class="tablink" onclick="openPage('Todo', this, 'orange')">Todo</button>
+	  </div>
+	  <div class="tablink doggo">
+		<button class="tablink" onclick="openPage('Doggo', this, 'lime')">Doggo</button>
+	  </div>
+	  <div class="tablink youtube">
+	  	<button class="tablink" onclick="openPage('Youtube', this, 'red')">Youtube</button>
+	  </div>
+	  <div class="tablink minecraft">
+		<button class="tablink" onclick="openPage('Minecraft', this, 'green')">Minecraft</button>
+	  </div>
+	  <div class="tablink windows93">
+	  	<button class="tablink" onclick="openPage('Windows93', this, 'purple')">Windows 93</button>
+	  </div>
+	  <div class="tablink socials">
+		<button class="dropbtn">Socials</button>
+	  </div>
+	</div>
+	<script>
+	function openPage(pageName,elmnt,color) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablink");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].style.backgroundColor = "";
+		}
+		document.getElementById(pageName).style.display = "block";
+		elmnt.style.backgroundColor = color;
+	}
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+	</script>
+</body>
+</html>
