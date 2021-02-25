@@ -34,11 +34,26 @@
 		padding-top: 20px;
 		padding-left: 20px;
 	}
-	.dropdown .dropbtn {
-		background-color: inherit;
-		font-family: inherit;
-		margin: 0;
+	.dropdown {
+	  float: left;
+	  overflow: hidden;
 	}
+
+	.dropdown .dropbtn {
+	  font-size: 16px;  
+	  border: none;
+	  outline: none;
+	  color: white;
+	  padding: 14px 16px;
+	  background-color: inherit;
+	  font-family: inherit;
+	  margin: 0;
+	}
+
+	.dropdown:hover .dropbtn {
+	  background-color: red;
+	}
+
 	.dropdown-content {
 	  display: none;
 	  position: absolute;
@@ -63,6 +78,7 @@
 
 	.dropdown:hover .dropdown-content {
 	  display: block;
+	}
 	#Home {background-color: lightblue;}
 	#Todo {background-color: orange;}
 	#Doggo {background-color: green;}
@@ -85,13 +101,13 @@
 	<button class="tablink" onclick="openPage('Youtube', this, 'red')">Youtube</button>
 	<button class="tablink" onclick="openPage('Windows93', this, 'purple')">Windows 93</button>
 	<div class="dropdown">
-		<button class="dropbtn">Socials</button>
+		<button class="dropbtn">Dropdown</button>
 		<div class="dropdown-content">
-		  <a href="#">Link 1</a>
-		  <a href="#">Link 2</a>
-		  <a href="#">Link 3</a>
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
 		</div>
-	</div>
+	 </div>
 	
 	<div id="Home" class="tabcontent">
 		<h3>Home</h3>
