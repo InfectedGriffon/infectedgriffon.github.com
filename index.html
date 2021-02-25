@@ -3,6 +3,12 @@
 <head>
 	<style>
 	/* Set height of body and the document to 100% to enable "full page tabs" */
+	.navbar{
+		display: flex;
+	  flex-flow: row nowrap;
+	  justify-content: space-around;
+	  align-items: stretch;
+	}
 	body, html {
 	  height: 100%;
 	  margin: 0;
@@ -48,11 +54,12 @@
 </head>
 <body>
 	<h1>Infected<wbr>Griffon's site of dumb stuff</h1>
-		<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-		<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-		<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-		<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
-
+		<div class="navbar">
+			<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+			<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+			<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+			<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+		</div>
 		<div id="Home" class="tabcontent">
 		 <h3>Home</h3>
 		 <p>Home is where the heart is..</p>
