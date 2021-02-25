@@ -2,7 +2,6 @@
 <html>
 <head>
 	<style>
-	/* Set height of body and the document to 100% to enable "full page tabs" */
 	.navbar{
 		display: flex;
 	  flex-flow: row nowrap;
@@ -16,12 +15,9 @@
 	  font-size: 30px;
 	  margin: 0px 1px;
 	}
-	body, html {
-	  height: 100%;
-	  margin: 0;
+	body{
 	  font-family: Arial;
 	}
-
 	/* Style tab links */
 	.tablink {
 	  background-color: #555;
@@ -62,38 +58,76 @@
 <body>
 	<h1>Infected<wbr>Griffon's site of dumb stuff</h1>
 		<div class="navbar">
-			<div>
-				<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-			</div>
-			<div>
-				<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-			</div>
-			<div>
-				<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-			</div>
-			<div>
-				<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
-			</div>
+			<div class="tablink home">
+				<button class="tablink" onclick="openPage('Home', this, 'lightblue')" id="defaultOpen">Home</button>
+		  </div>
+			<div class="tablink todo">
+				<button class="tablink" onclick="openPage('Todo', this, 'orange')">Todo</button>
+		  </div>
+			<div class="tablink doggo">
+				<button class="tablink" onclick="openPage('Doggo', this, 'lime')">Doggo</button>
+		  </div>
+			<div class="tablink youtube">
+		  	<button class="tablink" onclick="openPage('Youtube', this, 'red')">Youtube</button>
+		  </div>
+			<div class="tablink minecraft">
+				<button class="tablink" onclick="openPage('Minecraft', this, 'green')">Minecraft</button>
+		  </div>
+			<div class="tablink windows93">
+		  	<button class="tablink" onclick="openPage('Windows93', this, 'purple')">Windows 93</button>
+		  </div>
 		</div>
+
 		<div id="Home" class="tabcontent">
-		 <h3>Home</h3>
-		 <p>Home is where the heart is..</p>
+				<h3>Home</h3>
+				<p>
+					Hey! welcome to InfectedGriffon's website!<br/>
+					There's nothing much to do here, so kinda just look around and see how bad at HTML I am!
+				</p>
+		</div>
+		<div id="Todo" class="tabcontent">
+				<h3>Todo List:</h3>
+				<ol>
+					<li>Display some memes (slideshow or something)</li>
+					<li>Talk about Minecraft somehow</li>
+					<li>Show my friends how cool I am</li>
+					<li>Maybe a socials?</li>
+					<li>Something with javascript</li>
+					<li>Format this page better</li>
+					<li>Add a fancy title header</li>
+				</ol>
 		</div>
 
-		<div id="News" class="tabcontent">
-		 <h3>News</h3>
-		 <p>Some news this fine day!</p>
+		<div id="Doggo" class="tabcontent">
+				<img class="doggoimg" src="images/doggo.png" width="300">
 		</div>
 
-		<div id="Contact" class="tabcontent">
-		 <h3>Contact</h3>
-		 <p>Get in touch, or swing by for a cup of coffee.</p>
-		</div>
+		<div id="Youtube" class="tabcontent">
+			<h3>Cool youtube shows</h3>
+				<ul>
+					<li><a href="https://www.youtube.com/playlist?list=PL24C8378F296DB656">Battle for Dream Island</a>
+						by <a href="https://www.youtube.com/channel/UCeKLuqGciqZZ5RFYk5CbqXg">JacknJellify</a></li>
+					<li><a href="https://www.youtube.com/playlist?list=PLhVW2_-wzAgL9jquMbLIwMWPYf--dZbFG">Ena</a>
+						by <a href="https://www.youtube.com/channel/UCmo3YHm8GaHk0ZWovjow65A">Joel G</a></li>
+					<li><a href="https://www.youtube.com/playlist?list=PLZ5VEKOKH8PCjZJYvjlinBtjjmKV_-dk1">Autodale</a>
+						by <a href="https://www.youtube.com/channel/UCBYChBOoVXAenGDYvl5-dAw">Dead Sound</a></li>
+				</ul>
+			</div>
 
-		<div id="About" class="tabcontent">
-		 <h3>About</h3>
-		 <p>Who we are and what we do.</p>
-		</div>
+			<div id=Minecraft" class="tabcontent">
+				<h3>Minecraft</h3>
+				<p>text text text text<br>
+					text text text text<br>
+					text text text text<br>
+					text text text text<br>
+					text text text text<br>
+					text text text text</p>
+			</div>
+
+			<div id="Windows93" class="tabcontent">
+				<h3>Windows 93</h3>
+				<p>Windows 93 link goes here</p>
+			</div>
 		<script>
 			function openPage(pageName, elmnt, color) {
 			  // Hide all elements with class="tabcontent" by default */
