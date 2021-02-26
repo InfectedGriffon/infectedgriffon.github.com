@@ -43,7 +43,10 @@
 		margin-top: 48px;
 		height: 100%;
 	}
-	.dropdown-content {
+	.dropbtn:hover .dropdown-content {
+  	display: block;
+	}
+	/* .dropdown-content {
 	  display: none;
 	  position: absolute;
 	  background-color: #f9f9f9;
@@ -51,11 +54,7 @@
 	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	  padding: 12px 16px;
 	  z-index: 1;
-	}
-
-	.dropdown:hover .dropdown-content {
-	  display: block;
-	}
+	} */
 	#Home {background-color: lightblue;}
 	#Todo {background-color: orange;}
 	#Doggo {background-color: lime;}
@@ -78,7 +77,7 @@
 			<button class="tablink youtube" onclick="openPage('Youtube', this, 'red')">Youtube</button>
 			<button class="tablink Minecraft" onclick="openPage('Minecraft', this, 'green')">Minecraft</button>
 			<button class="tablink Windows93" onclick="openPage('Windows93', this, 'purple')">Windows 93</button>
-			<button class="tablink dropdown">Socials</button>
+			<button class="tablink dropbtn">Socials</button>
 		</div>
 
 		<div class="dropdown-content">
