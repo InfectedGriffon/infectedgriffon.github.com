@@ -48,9 +48,13 @@
 	}
 	 .dropdown-content {
 	  /* display: none; */
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-around;
+		align-items: stretch;
 	  position: absolute;
 	  background-color: #f9f9f9;
-	  min-width: 160px;
+	  width: 160px;
 	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	  padding: 12px 16px;
 	  z-index: 1;
@@ -80,10 +84,10 @@
 			<button class="tablink dropbtn">Socials</button>
 		</div>
 
-		<div>
-			<a id="Discord" class="dropdown-content" href="https://discord.gg/f9JwMWM2">discord</a>
-			<a id="Youtube" class="dropdown-content" href="https://www.youtube.com/channel/UCQCNS1MM3Fl-XkI_7eKbUkg">youtube</a>
-			<a id="Twitter" class="dropdown-content" href="https://twitter.com/raptor_time">twitter</a>
+		<div class="dropdown-content">
+			<a id="Discord" href="https://discord.gg/f9JwMWM2">discord</a>
+			<a id="Youtube" href="https://www.youtube.com/channel/UCQCNS1MM3Fl-XkI_7eKbUkg">youtube</a>
+			<a id="Twitter" href="https://twitter.com/raptor_time">twitter</a>
   	</div>
 
 		<div id="Home" class="tabcontent">
