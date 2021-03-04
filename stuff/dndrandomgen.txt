@@ -1,0 +1,22 @@
+$name : Dnd character creator
+$author : Jambeard
+$button : Create
+
+$race
+dragonborn
+dwarf
+elf
+gnome
+half-elf
+halfling
+half-orc
+human
+tiefling
+
+$character
+[an] [race].
+
+
+/*
+race, class, subrace, subclass, background
+*/
