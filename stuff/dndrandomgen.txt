@@ -13,7 +13,7 @@ half-orc
 human
 tiefling
 
-$character
+$>character
 [an] [race].
 
 
