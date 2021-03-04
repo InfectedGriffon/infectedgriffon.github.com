@@ -1,5 +1,7 @@
 $name : Dnd character creator
 $author : Jambeard
+$description : makes a D&D character using only the main guidebook.
+$amount : 1
 $button : Create
 
 $race
