@@ -1,47 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style>
-  /* Remove default bullets */
-  ul, #myUL {
-    list-style-type: none;
-  }
-
-  /* Remove margins and padding from the parent ul */
-  #myUL {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Style the caret/arrow */
-  .caret {
-    cursor: pointer;
-    user-select: none; /* Prevent text selection */
-  }
-
-  /* Create the caret/arrow with a unicode, and style it */
-  .caret::before {
-    content: "\25B6";
-    color: black;
-    display: inline-block;
-    margin-right: 6px;
-  }
-
-  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
-  .caret-down::before {
-    transform: rotate(90deg);
-  }
-
-  /* Hide the nested list */
-  .nested {
-    display: none;
-  }
-
-  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
-  .active {
-    display: block;
-  }
-	</style>
 	<title>InfectedGriffon</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 	<meta name="description" content="dumb testing site for html and stuff">
@@ -50,35 +9,5 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-  <ul id="myUL">
-    <li><span class="caret">Fire</span>
-      <ul class="nested">
-        <li>Lava</li>
-        <li>Lightning</li>
-      </ul>
-    </li>
-    <li><span class="caret">Water</span>
-      <ul class="nested">
-        <li>Blood</li>
-      </ul>
-    </li>
-    <li><span class="caret">Earth</span>
-      <ul class="nested">
-        <li>Metal</li>
-      </ul>
-    </li>
-    <li>air</li>
-  </ul>
-  <script>
-  var toggler = document.getElementsByClassName("caret");
-  var i;
-
-  for (i = 0; i < toggler.length; i++) {
-    toggler[i].addEventListener("click", function() {
-      this.parentElement.querySelector(".nested").classList.toggle("active");
-      this.classList.toggle("caret-down");
-    });
-  }
-  </script>
 </body>
 </html>
