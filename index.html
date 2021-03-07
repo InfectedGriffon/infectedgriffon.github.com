@@ -47,25 +47,25 @@
 
   .page-header {
     grid-column: 1 / -1;
-    background: #ffcdd2;
+    background: #2C2F33;
   }
 
   .page-sidebar {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
-    background: #e1bee7;
+    background: #2C2F33;
   }
   .page-nav {
     grid-column: 2 / 3;
-    background: #bbdefb;
+    background: #2C2F33;
   }
   .page-main {
     grid-column: 2 / 3;
-    background: #dcedc8;
+    background: #2C2F33;
   }
   .page-footer {
     grid-column: 1 / -1;
-    background: #ffecb3;
+    background: #2C2F33;
   }
 
   details p {
@@ -79,9 +79,23 @@
     <header class="page-header">
       Header
     </header>
-    <nav class="page-nav">
-      Nav
-    </nav>
+    <div class="page=nav" id="myTopnav">
+     <a href="#home" class="active">Home</a>
+     <a href="#news">News</a>
+     <a href="#contact">Contact</a>
+     <div class="dropdown">
+       <button class="dropbtn">Dropdown
+         <i class="fa fa-caret-down"></i>
+       </button>
+       <div class="dropdown-content">
+         <a href="#">Link 1</a>
+         <a href="#">Link 2</a>
+         <a href="#">Link 3</a>
+       </div>
+     </div>
+     <a href="#about">About</a>
+     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
     <main class="page-main">
       <article>
         <details>
