@@ -2,78 +2,45 @@
 <html>
 <head>
 	<style>
-	body {
-		font-family: Arial, Helvetica, sans-serif;
-	}
+  /* Remove default bullets */
+  ul, #myUL {
+    list-style-type: none;
+  }
 
-	.navbar {
-		overflow: hidden;
-		background-color: #333;
-	}
+  /* Remove margins and padding from the parent ul */
+  #myUL {
+    margin: 0;
+    padding: 0;
+  }
 
-	.navbar a {
-		float: left;
-		font-size: 16px;
-		color: white;
-		text-align: center;
-		padding: 14px 16px;
-		text-decoration: none;
-	}
+  /* Style the caret/arrow */
+  .caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+  }
 
-	.dropdown {
-		float: left;
-		overflow: hidden;
-	}
+  /* Create the caret/arrow with a unicode, and style it */
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
 
-	.dropdown .dropbtn {
-		padding: 12.666px 16px;
-		font-family: inherit;
-	}
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .caret-down::before {
+    transform: rotate(90deg);
+  }
 
-	.navbar a:hover, .dropdown:hover .dropbtn {
-		background-color: red;
-	}
+  /* Hide the nested list */
+  .nested {
+    display: none;
+  }
 
-	.dropdown-content {
-		display: none;
-		position: absolute;
-		background-color: #f9f9f9;
-		min-width: 160px;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		z-index: 1;
-		top: 55px;
-	}
-
-	.dropdown-content a {
-		float: none;
-		color: black;
-		padding: 12px 16px;
-		text-decoration: none;
-		display: block;
-		text-align: left;
-	}
-
-	.dropdown-content a:hover {
-		background-color: #ddd;
-	}
-
-	.dropdown:hover .dropdown-content {
-		display: block;
-	}
-	.navbar button {
-		background-color: inherit;
-		float: left;
-		border: none;
-		outline: none;
-		cursor: pointer;
-		padding: 12px 16px;
-		transition: 0.3s;
-		font-size: 17px;
-		color: white;
-}
-	.navbar button:hover {
-		background-color: #ddd;
-	}
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }
 	</style>
 	<title>InfectedGriffon</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
@@ -81,26 +48,40 @@
 	<meta name="author" content="InfectedGriffon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div class="navbar">
-		<button>InfectedGriffon</button>
-		<button class="tablink">Home</button>
-		<button class="tablink">Todo</button>
-		<button class="tablink">Youtube</button>
-		<button class="tablink">Minecraft</button>
-		<button class="tablink">Windows 93</button>
-		<div class="dropdown">
-			<button class="dropbtn">Socials
-				<i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="#">Link 1</a>
-				<a href="#">Link 2</a>
-				<a href="#">Link 3</a>
-			</div>
-		</div>
-	</div>
+  <ul id="myUL">
+    <li><span class="caret">Beverages</span>
+      <ul class="nested">
+        <li>Water</li>
+        <li>Coffee</li>
+        <li><span class="caret">Tea</span>
+          <ul class="nested">
+            <li>Black Tea</li>
+            <li>White Tea</li>
+            <li><span class="caret">Green Tea</span>
+              <ul class="nested">
+                <li>Sencha</li>
+                <li>Gyokuro</li>
+                <li>Matcha</li>
+                <li>Pi Lo Chun</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <script>
+  var toggler = document.getElementsByClassName("caret");
+  var i;
+
+  for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function() {
+      this.parentElement.querySelector(".nested").classList.toggle("active");
+      this.classList.toggle("caret-down");
+    });
+  }
+  </script>
 </body>
 </html>
