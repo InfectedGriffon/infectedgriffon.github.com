@@ -8,121 +8,148 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
   <style>
-  * {
-    box-sizing: border-box;
+  body {margin:0;font-family:Arial}
+
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
   }
-  body {
-    background: #e4e4e4;
-    padding: 5px;
-    height: 100vh;
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .topnav .icon {
+    display: none;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
     margin: 0;
-
-    font: 500 100% system-ui, sans-serif;
-    text-transform: uppercase;
-  }
-  .page-wrap {
-    background: white;
-    height: calc(100vh - 10px);
-    box-shadow: 0 0 3px rgba(black, 0.33);
-
-    display: grid;
-    grid-template-columns: minmax(10px, 1fr) minmax(10px, 3fr);
-    grid-template-rows: min-content min-content 1fr min-content;
-    gap: 1px;
-
-    > * {
-      padding: 1rem;
-      text-align: center;
-    }
-
-    @media (max-width: 600px) {
-      grid-template-columns: 100%;
-      grid-template-rows: auto;
-      > * {
-        grid-column: 1 / -1 !important;
-        grid-row: auto !important;
-      }
-    }
   }
 
-  .page-header {
-    grid-column: 1 / -1;
-    background: #2C2F33;
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
   }
 
-  .page-sidebar {
-    grid-column: 1 / 2;
-    grid-row: 2 / 4;
-    background: #2C2F33;
-  }
-  .page-nav {
-    grid-column: 2 / 3;
-    background: #2C2F33;
-  }
-  .page-main {
-    grid-column: 2 / 3;
-    background: #2C2F33;
-  }
-  .page-footer {
-    grid-column: 1 / -1;
-    background: #2C2F33;
-  }
-
-  details p {
-    text-transform: none;
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
     text-align: left;
   }
+
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    color: white;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
   </style>
 </head>
 <body>
-  <div class="page-wrap">
-    <header class="page-header">
-      Header
-    </header>
-    <div class="page=nav" id="myTopnav">
-     <a href="#home" class="active">Home</a>
-     <a href="#news">News</a>
-     <a href="#contact">Contact</a>
-     <div class="dropdown">
-       <button class="dropbtn">Dropdown
-         <i class="fa fa-caret-down"></i>
-       </button>
-       <div class="dropdown-content">
-         <a href="#">Link 1</a>
-         <a href="#">Link 2</a>
-         <a href="#">Link 3</a>
-       </div>
-     </div>
-     <a href="#about">About</a>
-     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
     </div>
-    <main class="page-main">
-      <article>
-        <details>
-          <summary>Article</summary>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos laborum cumque incidunt, enim ipsa dicta? Porro illo doloribus, consectetur eum exercitationem sit ipsam, est nesciunt maxime, eius animi dolor? Harum.</p>
-          <p>Commodi culpa deserunt dolor sed, ipsam tempore ullam architecto fuga voluptas, quis veniam. Vitae veniam, odit adipisci, quas similique debitis excepturi quisquam minima facere temporibus, porro optio perferendis iusto fuga.</p>
-          <p>Illo numquam, sapiente neque repellendus facere amet doloribus asperiores quia eum? Sunt vero amet neque vel? Tempora, nulla voluptatum amet autem culpa magnam debitis! Dolores esse quam amet nobis ut.</p>
-          <p>Sunt excepturi in nostrum, fugiat veritatis ab sit sequi nemo aperiam deserunt temporibus, dolorem ex adipisci autem. Quasi, iure fugiat! Nulla amet doloribus velit nam tempora, soluta consequatur doloremque omnis?</p>
-          <p>Officia ea repellat ad, sapiente eligendi modi magni quos temporibus totam culpa corporis, dignissimos quibusdam mollitia dolore eaque suscipit soluta beatae ipsam! Aperiam doloremque vero soluta pariatur possimus. Cupiditate, fuga.</p>
-          <p>Beatae deserunt veritatis magni quis quae enim ad est dignissimos iste, quidem, dolores temporibus asperiores natus inventore, nobis eius facere adipisci doloremque eligendi autem magnam excepturi? Inventore, iusto soluta. Maiores.</p>
-          <p>Enim facilis aspernatur, maiores unde at inventore temporibus minima possimus eveniet? Cum alias, asperiores quibusdam doloribus, vel ullam qui in dicta recusandae eaque atque dolor perspiciatis tenetur, fugit vero reprehenderit.</p>
-          <p>Reiciendis, deleniti eius nostrum fugit commodi quasi esse molestias non voluptates, corrupti excepturi voluptatibus, consequatur ipsa animi placeat quia corporis ut itaque quos pariatur inventore. Quasi incidunt sapiente quisquam soluta?</p>
-          <p>Laboriosam eos atque possimus assumenda quia voluptatem saepe optio, eveniet laborum. Sit esse doloremque laboriosam? Ullam inventore ut facilis accusamus, ipsum, autem labore incidunt consequatur eos dolorem, sit aperiam odit.</p>
-          <p>Consequuntur pariatur illum doloremque, necessitatibus praesentium quis cumque officiis non commodi reprehenderit quaerat velit saepe impedit vitae dolores, veritatis reiciendis ducimus nobis totam, itaque porro temporibus excepturi error iste! Sunt.</p>
-          <p>Commodi culpa deserunt dolor sed, ipsam tempore ullam architecto fuga voluptas, quis veniam. Vitae veniam, odit adipisci, quas similique debitis excepturi quisquam minima facere temporibus, porro optio perferendis iusto fuga.</p>
-          <p>Illo numquam, sapiente neque repellendus facere amet doloribus asperiores quia eum? Sunt vero amet neque vel? Tempora, nulla voluptatum amet autem culpa magnam debitis! Dolores esse quam amet nobis ut.</p>
-          <p>Sunt excepturi in nostrum, fugiat veritatis ab sit sequi nemo aperiam deserunt temporibus, dolorem ex adipisci autem. Quasi, iure fugiat! Nulla amet doloribus velit nam tempora, soluta consequatur doloremque omnis?</p>
-          <p>Officia ea repellat ad, sapiente eligendi modi magni quos temporibus totam culpa corporis, dignissimos quibusdam mollitia dolore eaque suscipit soluta beatae ipsam! Aperiam doloremque vero soluta pariatur possimus. Cupiditate, fuga.</p>
-        </details>
-      </article>
-    </main>
-    <aside class="page-sidebar">
-      Aside
-    </aside>
-    <footer class="page-footer">
-      Footer
-    </footer>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
+
+  <div style="padding-left:16px">
+    <h2>Responsive Topnav with Dropdown</h2>
+    <p>Resize the browser window to see how it works.</p>
+    <p>Hover over the dropdown button to open the dropdown menu.</p>
+  </div>
+
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+  </script>
 </body>
 </html>
