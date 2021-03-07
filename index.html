@@ -155,6 +155,9 @@
     <a href="#home" class="active">Home</a>
     <a href="#news">News</a>
     <a href="#contact">Contact</a>
+    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
     <div class="dropdown">
       <button class="dropbtn">Cool Stuff
         <i class="fa fa-caret-down"></i>
@@ -171,9 +174,7 @@
 
   <!-- Tab links -->
   <div class="tab">
-   <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-   <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-   <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+
   </div>
 
   <!-- Tab content -->
@@ -220,7 +221,9 @@
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
-  } 
+  }
+
+  document.getElementById("defaultOpen").click();
   </script>
 </body>
 </html>
