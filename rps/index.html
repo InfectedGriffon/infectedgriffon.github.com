@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
   <style media="screen">
-    #rock, #paper, #scissors {
+    .handsymbolimage {
     display: none;
     }
   </style>
@@ -26,7 +26,6 @@
     function rps() {
       document.getElementsByClassName("handsymbolimage").style.display = "none";
       num = Math.floor(Math.random() * 3);
-
       if (num == 2) {
         document.getElementById("rock").style.display = "block";
       } else if (num == 1) {
@@ -35,7 +34,6 @@
         document.getElementById("scissors").style.display = "block";
       }
     }
-
   </script>
 </body>
 </html>
