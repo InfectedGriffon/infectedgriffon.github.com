@@ -24,14 +24,17 @@
       num = Math.floor(Math.random() * Math.floor(3));
       if (num == 2) {
         document.getElementById('rock').style.display = "block";
+        document.getElementById('paper').style.display = "none";
+        document.getElementById('scissors').style.display = "none";
       } else if (num == 1) {
+        document.getElementById('rock').style.display = "none";
         document.getElementById('paper').style.display = "block";
+        document.getElementById('scissors').style.display = "none";
       } else {
+        document.getElementById('rock').style.display = "none";
+        document.getElementById('paper').style.display = "none";
         document.getElementById('scissors').style.display = "block";
       }
-      document.getElementById('rock').style.display = "none";
-      document.getElementById('paper').style.display = "none";
-      document.getElementById('scissors').style.display = "none";
     }
   </script>
 </body>
