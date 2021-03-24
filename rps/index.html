@@ -26,7 +26,9 @@
     var num = 0
 
     function rps() {
-      document.getElementsByClassName("handsymbolimage").style.display = "none";
+      document.getElementById("rock").style.display = "none";
+      document.getElementById("paper").style.display = "none";
+      document.getElementById("scissors").style.display = "none";
       num = Math.floor(Math.random() * 3);
       if (num == 2) {
         document.getElementById("rock").style.display = "block";
