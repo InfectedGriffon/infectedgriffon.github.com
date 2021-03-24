@@ -20,11 +20,8 @@
   <div id="container">
     <div id="yourside">
 
-      <button id="button" onclick="rps()">Throw</button>
-      <img class="handsymbolimage yourhand" id="rock" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Rock-paper-scissors_%28rock%29.png" alt="rock" width="200">
-      <img class="handsymbolimage yourhand" id="paper" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Rock-paper-scissors_%28paper%29.png" alt="paper" width="200">
-      <img class="handsymbolimage yourhand" id="scissors" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Rock-paper-scissors_%28scissors%29.png" alt="scissors" width="200">
       <h2>You threw <span id="youthrew">nothing yet</span>.</h2>
+      <button id="button" onclick="rps()">Throw</button>
 
     </div>
 
@@ -39,19 +36,13 @@
     var theirroll = 0
 
     function rps() {
-      document.getElementById("rock").style.display = "none";
-      document.getElementById("paper").style.display = "none";
-      document.getElementById("scissors").style.display = "none";
       yourroll = Math.floor(Math.random() * 3);
       theirroll = Math.floor(Math.random() * 3);
-      if (num == 2) {
-        document.getElementById("rock").style.display = "block";
+      if (yourroll == 2) {
         document.getElementById("youthrew").innerHTML = "rock";
-      } else if (num == 1) {
-        document.getElementById("paper").style.display = "block";
+      } else if (yourroll == 1) {
         document.getElementById("youthrew").innerHTML = "paper";
       } else {
-        document.getElementById("scissors").style.display = "block";
         document.getElementById("youthrew").innerHTML = "scissors";
       }
     }
