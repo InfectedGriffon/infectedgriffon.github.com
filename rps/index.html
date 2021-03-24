@@ -20,6 +20,8 @@
   <img class="handsymbolimage" id="paper" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Rock-paper-scissors_%28paper%29.png" alt="paper" width="200">
   <img class="handsymbolimage" id="scissors" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Rock-paper-scissors_%28scissors%29.png" alt="scissors" width="200">
 
+  <h2>You threw <span id="threw">nothing yet</span>.</h2>
+
   <script>
     var num = 0
 
@@ -28,10 +30,13 @@
       num = Math.floor(Math.random() * 3);
       if (num == 2) {
         document.getElementById("rock").style.display = "block";
+        document.getElementById("threw").innerHTML = "rock";
       } else if (num == 1) {
         document.getElementById("paper").style.display = "block";
+        document.getElementById("threw").innerHTML = "paper";
       } else {
         document.getElementById("scissors").style.display = "block";
+        document.getElementById("threw").innerHTML = "scissors";
       }
     }
   </script>
