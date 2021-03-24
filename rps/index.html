@@ -11,34 +11,48 @@
     .handsymbolimage {
     display: none;
     }
+    #container {
+    display: flex;
+    }
   </style>
 </head>
 <body>
-  <button id="button" onclick="rps()">Throw</button>
+  <div id="container">
+    <div id="yourside">
 
-  <img class="handsymbolimage" id="rock" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Rock-paper-scissors_%28rock%29.png" alt="rock" width="200">
-  <img class="handsymbolimage" id="paper" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Rock-paper-scissors_%28paper%29.png" alt="paper" width="200">
-  <img class="handsymbolimage" id="scissors" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Rock-paper-scissors_%28scissors%29.png" alt="scissors" width="200">
+      <button id="button" onclick="rps()">Throw</button>
+      <img class="handsymbolimage yourhand" id="rock" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Rock-paper-scissors_%28rock%29.png" alt="rock" width="200">
+      <img class="handsymbolimage yourhand" id="paper" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Rock-paper-scissors_%28paper%29.png" alt="paper" width="200">
+      <img class="handsymbolimage yourhand" id="scissors" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Rock-paper-scissors_%28scissors%29.png" alt="scissors" width="200">
+      <h2>You threw <span id="youthrew">nothing yet</span>.</h2>
 
-  <h2>You threw <span id="threw">nothing yet</span>.</h2>
+    </div>
 
+    <div id="theirside">
+
+      <h2>They threw <span id="theythrew">nothing yet</span>.</h2>
+
+    </div>
+  </div>
   <script>
-    var num = 0
+    var yourroll = 0
+    var theirroll = 0
 
     function rps() {
       document.getElementById("rock").style.display = "none";
       document.getElementById("paper").style.display = "none";
       document.getElementById("scissors").style.display = "none";
-      num = Math.floor(Math.random() * 3);
+      yourroll = Math.floor(Math.random() * 3);
+      theirroll = Math.floor(Math.random() * 3);
       if (num == 2) {
         document.getElementById("rock").style.display = "block";
-        document.getElementById("threw").innerHTML = "rock";
+        document.getElementById("youthrew").innerHTML = "rock";
       } else if (num == 1) {
         document.getElementById("paper").style.display = "block";
-        document.getElementById("threw").innerHTML = "paper";
+        document.getElementById("youthrew").innerHTML = "paper";
       } else {
         document.getElementById("scissors").style.display = "block";
-        document.getElementById("threw").innerHTML = "scissors";
+        document.getElementById("youthrew").innerHTML = "scissors";
       }
     }
   </script>
