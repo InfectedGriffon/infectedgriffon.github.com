@@ -7,25 +7,29 @@
 	<meta name="author" content="InfectedGriffon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
+  <style media="screen">
+    #rock, #paper, #scissors {
+    display: none;
+    }
+  </style>
 </head>
 <body>
-  <img class="rock" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Rock-paper-scissors_%28rock%29.png" alt="rock" width="100">
-  <img class="paper" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Rock-paper-scissors_%28paper%29.png" alt="paper" width="100">
-  <img class="scissors" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Rock-paper-scissors_%28scissors%29.png" alt="scissors" width="100">
+  <img id="rock" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Rock-paper-scissors_%28rock%29.png" alt="rock" width="100">
+  <img id="paper" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Rock-paper-scissors_%28paper%29.png" alt="paper" width="100">
+  <img id="scissors" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Rock-paper-scissors_%28scissors%29.png" alt="scissors" width="100">
   <button type="button"onclick="rps()">Throw</button>
-  <p id="demo"></p>
   <script type="text/javascript">
     var num = 0
     function rps() {
       num = Math.floor(Math.random() * Math.floor(3));
       if (num == 2) {
-        document.getElementById('demo').innerHTML = "rock";
+        document.getElementById('rock').style.display = "block";
       } else if (num == 1) {
-        document.getElementById('demo').innerHTML = "paper";
+        document.getElementById('paper').style.display = "block";
       } else {
-        document.getElementById('demo').innerHTML = "scissors";
+        document.getElementById('scissors').style.display = "block";
       }
-      //document.getElementById('demo').innerHTML = num;
+      document.getElementById('scissors').style.display = "block";
     }
   </script>
 </body>
