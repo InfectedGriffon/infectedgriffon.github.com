@@ -1,4 +1,2 @@
 # infectedgriffon.github.com
-website!!!
-
-yep... that's it.
+guys i swear im gonna do something with this
