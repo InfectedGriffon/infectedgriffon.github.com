@@ -1,2 +1,7 @@
 # infectedgriffon.github.com
-guys i swear im gonna do something with this
+current subpages:
+
+- Rock Paper Scissors (/rps)
+- Photography (/photography)
+- Among us (/amongus)
+- Careers (/change)
