@@ -1,12 +1,14 @@
 .center {
   margin: auto;
+	margin-top: 10px;
   width: 50%;
   border: 3px solid green;
   padding: 10px;
 }
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+	color: #b00b69;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 .topnav {
