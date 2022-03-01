@@ -1,4 +1,5 @@
 .center {
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
   margin: auto;
 	margin-top: 10px;
   width: 50%;
@@ -7,8 +8,7 @@
 }
 body {
   margin: 0;
-	color: #b00b69;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+	  font-family: Arial, Helvetica, sans-serif;
 }
 
 .topnav {
