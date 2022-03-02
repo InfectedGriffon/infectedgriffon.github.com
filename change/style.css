@@ -25,7 +25,7 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: red;
   color: black;
 }
 
@@ -33,6 +33,6 @@ body {
   background-color: #04AA6D;
   color: white;
 
-b {
-	color:red;
+b, strong {
+	color: red;
 }
