@@ -25,14 +25,14 @@ body {
 }
 
 .topnav a:hover {
-  background-color: red;
-  color: black;
+  background-color: #ddd;
+  color: red;
 }
 
 .topnav a.active {
   background-color: #04AA6D;
   color: white;
 
-strong {
+.red {
 	color: red;
 }
