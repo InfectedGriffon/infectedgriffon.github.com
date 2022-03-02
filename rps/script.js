@@ -1,22 +1,22 @@
-var yourroll = 0
-var theirroll = 0
-
 function rps() {
-  yourroll = Math.floor(Math.random() * 3);
-  theirroll = Math.floor(Math.random() * 3);
-  if (yourroll == 2) {
-    document.getElementById("youthrew").innerHTML = "rock";
-  } else if (yourroll == 1) {
-    document.getElementById("youthrew").innerHTML = "paper";
-  } else {
-  document.getElementById("youthrew").innerHTML = "scissors";
+  var yourroll = Math.floor(Math.random() * 3);
+  var theirroll = Math.floor(Math.random() * 3);
+
+  switch (yourroll) {
+    case 1:
+      document.getElementById("youthrew").innerHTML = "rock";
+    case 2:
+      document.getElementById("youthrew").innerHTML = "paper";
+    case 3:
+      document.getElementById("youthrew").innerHTML = "scissors";
   }
 
-  if (theirroll == 2) {
-    document.getElementById("theythrew").innerHTML = "rock";
-  } else if (theirroll == 1) {
-   document.getElementById("theythrew").innerHTML = "paper";
-  } else {
-    document.getElementById("theythrew").innerHTML = "scissors";
+  switch (theirroll) {
+    case 1:
+      document.getElementById("theythrew").innerHTML = "rock";
+    case 2:
+      document.getElementById("theythrew").innerHTML = "paper";
+    case 3:
+      document.getElementById("theythrew").innerHTML = "scissors";
   }
 }
