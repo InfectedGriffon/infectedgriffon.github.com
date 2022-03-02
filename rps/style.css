@@ -1,0 +1,14 @@
+body {
+  height: 100%;
+}
+
+.handsymbolimage {
+  display: none;
+}
+    
+#container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+}

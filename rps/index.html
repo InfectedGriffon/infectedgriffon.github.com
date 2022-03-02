@@ -7,26 +7,13 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="stylesheet" href="style.css">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="description" content="rock paper scissors">
 	<meta name="author" content="InfectedGriffon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
-  <style media="screen">
-    body {
-    height: 100%;
-    }
-    .handsymbolimage {
-    display: none;
-    }
-    #container {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    height: 100%;
-    }
-  </style>
 </head>
 <body>
   <div id="container">
@@ -43,30 +30,6 @@
 
     </div>
   </div>
-
-  <script>
-    var yourroll = 0
-    var theirroll = 0
-
-    function rps() {
-      yourroll = Math.floor(Math.random() * 3);
-      theirroll = Math.floor(Math.random() * 3);
-      if (yourroll == 2) {
-        document.getElementById("youthrew").innerHTML = "rock";
-      } else if (yourroll == 1) {
-        document.getElementById("youthrew").innerHTML = "paper";
-      } else {
-        document.getElementById("youthrew").innerHTML = "scissors";
-      }
-
-      if (theirroll == 2) {
-        document.getElementById("theythrew").innerHTML = "rock";
-      } else if (theirroll == 1) {
-        document.getElementById("theythrew").innerHTML = "paper";
-      } else {
-        document.getElementById("theythrew").innerHTML = "scissors";
-      }
-    }
-  </script>
+	<script src="script.js"></script>
 </body>
 </html>
