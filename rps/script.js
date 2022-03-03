@@ -5,6 +5,7 @@ function rps() {
   switch (yourroll) {
     case 1:
       document.getElementById("youthrew").innerHTML = "rock";
+       document.getElementById("yourimage").src = "images/rock-red.png";
       break;
     case 2:
       document.getElementById("youthrew").innerHTML = "paper";
