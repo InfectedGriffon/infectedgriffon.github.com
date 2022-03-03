@@ -22,5 +22,7 @@ body {
   margin-right:100px;
 }
 #center {
-  margin:200px;
+  margin-top:200px;
+  margin-left:200px;
+  margin-right:200px;
 }
