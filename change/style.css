@@ -29,5 +29,6 @@ body {
 	color: red;
 }
 #map {
-  margin:auto;
+  margin-left: auto;
+  margin-right: auto;
 }
