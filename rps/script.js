@@ -20,15 +20,15 @@ function rps() {
   switch (theirroll) {
     case 1:
       document.getElementById("theythrew").innerHTML = "rock";
-      document.getElementById("yourimage").src = "images/rock-blue.png";
+      document.getElementById("theirimage").src = "images/rock-blue.png";
       break;
     case 2:
       document.getElementById("theythrew").innerHTML = "paper";
-      document.getElementById("yourimage").src = "images/paper-blue.png";
+      document.getElementById("theirimage").src = "images/paper-blue.png";
       break;
     case 3:
       document.getElementById("theythrew").innerHTML = "scissors";
-      document.getElementById("yourimage").src = "scissors/rock-blue.png";
+      document.getElementById("theirimage").src = "scissors/rock-blue.png";
       break;
   }
 }
