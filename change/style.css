@@ -28,3 +28,6 @@ body {
 .red {
 	color: red;
 }
+#map {
+  margin:auto;
+}
