@@ -5,10 +5,17 @@ body {
 .handsymbolimage {
   display: none;
 }
-    
+
 #container {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   height: 100%;
+}
+
+#yourside {
+  width:40%;
+}
+#theirside {
+  width:40%;
 }
