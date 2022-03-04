@@ -1,22 +1,34 @@
-var yourroll = 0
-var theirroll = 0
-
 function rps() {
-  yourroll = Math.floor(Math.random() * 3);
-  theirroll = Math.floor(Math.random() * 3);
-  if (yourroll == 2) {
-    document.getElementById("youthrew").innerHTML = "rock";
-  } else if (yourroll == 1) {
-    document.getElementById("youthrew").innerHTML = "paper";
-  } else {
-  document.getElementById("youthrew").innerHTML = "scissors";
+  var yourroll = Math.floor(Math.random() * 3);
+  var theirroll = Math.floor(Math.random() * 3);
+
+  switch (yourroll) {
+    case 1:
+      document.getElementById("youthrew").innerHTML = "rock";
+      document.getElementById("yourimage").src = "images/rock-red.png";
+      break;
+    case 2:
+      document.getElementById("youthrew").innerHTML = "paper";
+      document.getElementById("yourimage").src = "images/paper-red.png";
+      break;
+    case 3:
+      document.getElementById("youthrew").innerHTML = "scissors";
+      document.getElementById("yourimage").src = "scissors/rock-red.png";
+      break;
   }
 
-  if (theirroll == 2) {
-    document.getElementById("theythrew").innerHTML = "rock";
-  } else if (theirroll == 1) {
-   document.getElementById("theythrew").innerHTML = "paper";
-  } else {
-    document.getElementById("theythrew").innerHTML = "scissors";
+  switch (theirroll) {
+    case 1:
+      document.getElementById("theythrew").innerHTML = "rock";
+      document.getElementById("theirimage").src = "images/rock-blue.png";
+      break;
+    case 2:
+      document.getElementById("theythrew").innerHTML = "paper";
+      document.getElementById("theirimage").src = "images/paper-blue.png";
+      break;
+    case 3:
+      document.getElementById("theythrew").innerHTML = "scissors";
+      document.getElementById("theirimage").src = "scissors/rock-blue.png";
+      break;
   }
 }

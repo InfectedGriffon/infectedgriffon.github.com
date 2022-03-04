@@ -1,14 +1,22 @@
 body {
   height: 100%;
 }
-
-.handsymbolimage {
-  display: none;
-}
-    
 #container {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   height: 100%;
+}
+#yourside {
+  width:40%;
+  margin-left:100px;
+}
+#theirside {
+  width:40%;
+  margin-right:100px;
+}
+#middle {
+  margin-top:200px;
+  margin-left:200px;
+  margin-right:200px;
 }
