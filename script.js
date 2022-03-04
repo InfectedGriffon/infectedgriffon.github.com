@@ -18,4 +18,7 @@ var x = setInterval(function() {
     clearInterval(x);
     document.getElementById("timeleft").innerHTML = "EXPIRED";
   }
+
+	var loadingDots = seconds % 3;
+	document.getElementById("comingsoon").innerHTML = "Coming Soon" + ".".repeat(loadingDots);
 }, 1000);
