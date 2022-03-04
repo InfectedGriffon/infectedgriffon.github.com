@@ -19,6 +19,6 @@ var x = setInterval(function() {
     document.getElementById("timeleft").innerHTML = "EXPIRED";
   }
 
-	var loadingDots = seconds % 3;
+	var loadingDots = (60-seconds) % 4;
 	document.getElementById("comingsoon").innerHTML = "Coming Soon" + ".".repeat(loadingDots);
 }, 1000);
