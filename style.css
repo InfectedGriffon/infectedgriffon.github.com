@@ -3,3 +3,9 @@ p {
   font-size: 60px;
   margin-top: 60px;
 }
+html,body {
+	min-height: 100%;
+} 
+body {
+	background-color:red;
+}
