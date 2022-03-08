@@ -8,8 +8,7 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("timeleft").innerHTML = days + " Days<br> " + hours + " Hours<br> "
-  + minutes + " Minutes<br> " + seconds + " Seconds<br> ";
+  document.getElementById("timeleft").innerHTML = days + " Days<br> " + hours + " Hours<br> " + minutes + " Minutes<br> " + seconds + " Seconds<br> ";
 
   if (distance < 0) {
     clearInterval(x);
