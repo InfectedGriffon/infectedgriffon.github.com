@@ -10,11 +10,12 @@ var x = setInterval(function() {
 
   document.getElementById("timeleft").innerHTML = days + " Days<br> " + hours + " Hours<br> " + minutes + " Minutes<br> " + seconds + " Seconds<br> ";
 
-  if (distance < 0) {
-    clearInterval(x);
-  document.getElementById("timeleft").innerHTML = "EXPIRED";
-  }
-
 	var loadingDots = (60-seconds) % 4;
 	document.getElementById("comingsoon").innerHTML = "Coming Soon" + ".".repeat(loadingDots);
+	
+  if (distance <= 0) {
+    clearInterval(x);
+		document.getElementById("comingsoon").innerHTML = "THE TIME HAS COME."
+  	document.getElementById("timeleft").innerHTML = "APRIL FOOLS IS UPON US";
+  }
 }, 1000);
