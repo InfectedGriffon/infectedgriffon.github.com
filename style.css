@@ -3,10 +3,3 @@ p {
   font-size: 60px;
   margin-top: 60px;
 }
-html {
-	min-height: 100%;
-} 
-body {
-	min-height: 100%;
-	background-color: red;
-}
