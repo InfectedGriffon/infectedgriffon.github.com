@@ -9,6 +9,9 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   document.getElementById("timeleft").innerHTML = days + " Days<br> " + hours + " Hours<br> " + minutes + " Minutes<br> " + seconds + " Seconds<br> ";
+
+	var loadingDots = (60-seconds) % 4;
+	document.getElementById("comingsoon").innerHTML = "Soon" + ".".repeat(loadingDots);
 	
   if (distance <= 0) {
     clearInterval(x);
