@@ -1,5 +1,5 @@
 function rps() {
-	const hands = ['nothing', 'rock', 'paper', 'scissors'];
+	const hands = ['rock', 'paper', 'scissors'];
   var yourroll = Math.floor(Math.random() * 3);
   var theirroll = Math.floor(Math.random() * 3);
 
