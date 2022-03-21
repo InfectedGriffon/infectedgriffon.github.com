@@ -10,9 +10,6 @@ var x = setInterval(function() {
 
   document.getElementById("timeleft").innerHTML = days + " Days<br> " + hours + " Hours<br> " + minutes + " Minutes<br> " + seconds + " Seconds<br> ";
 
-	var loadingDots = (60-seconds) % 4;
-	document.getElementById("comingsoon").innerHTML = "Soon" + ".".repeat(loadingDots);
-	
   if (distance <= 0) {
     clearInterval(x);
 		document.getElementById("comingsoon").innerHTML = "THE TIME HAS COME."
