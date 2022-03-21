@@ -7,6 +7,6 @@ function rps() {
   document.getElementById("youthrew").innerHTML = hands[yourroll];
   document.getElementById("yourimage").src = "images/" + hands[yourroll] + "-red.png";
 
-	document.getElementById("theithrew").innerHTML = hands[theirroll];
-  document.getElementById("theirimage").src = "images/" + hands[theirroll] + "-red.png";  
+	document.getElementById("theirthrew").innerHTML = hands[theirroll];
+  document.getElementById("theirimage").src = "images/" + hands[theirroll] + "-blue.png";  
 }
