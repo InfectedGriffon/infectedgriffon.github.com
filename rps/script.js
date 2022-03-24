@@ -13,7 +13,7 @@ function rps() {
   document.getElementById("theirimage").src = "images/" + hands[theirroll] + "-blue.png";  
 
 	//find winner
-	if (yourroll = theirroll) {
+	if (yourroll == theirroll) {
 		document.getElementById("winner").innerHTML = "Winner: Tie"; //tie
 	} else if(yourroll == theirroll+2 || yourroll == theirroll-1) {
 		/*
