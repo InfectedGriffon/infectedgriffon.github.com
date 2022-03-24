@@ -17,7 +17,7 @@ function rps() {
 		//tie
 	} else {
 		var winner = Boolean(yourroll == theirroll+2 || yourroll == theirroll-1); //true for left, false for right
-		document.getElementById("winner").innerHTML = winner;
+		document.getElementById("winner").innerHTML = winner.toString();
 		//if its two more or one less than right they win
 		//1-3 > rock beats scissors
 		//2-1 > paper beats rock
