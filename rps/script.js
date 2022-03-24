@@ -15,7 +15,7 @@ function rps() {
 	//find winner
 	if (yourroll == theirroll) {
 		document.getElementById("winner").innerHTML = "Winner:<br>Tie"; //tie
-	} else if(yourroll == theirroll+2 || yourroll == theirroll-1) {
+	} else if(yourroll == theirroll+1 || yourroll == theirroll-2) {
 		/*
 			1 - 3 > rock beats scissors
 			2 - 1 > paper beats rock
