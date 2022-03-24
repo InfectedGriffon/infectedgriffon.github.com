@@ -4,24 +4,26 @@ function rps() {
   var theirroll = Math.floor(Math.random() * hands.length); //pick a random symbol for right side
 	
 
-	//change text and image to the symbol rolled
+	//change left side text and image to the symbol rolled
   document.getElementById("youthrew").innerHTML = hands[yourroll];
   document.getElementById("yourimage").src = "images/" + hands[yourroll] + "-red.png";
 
-	//same for right side
+	//change right side text and image to the symbol rolled
 	document.getElementById("theythrew").innerHTML = hands[theirroll];
   document.getElementById("theirimage").src = "images/" + hands[theirroll] + "-blue.png";  
 
 	//find winner
 	if (yourroll = theirroll) {
-		//tie
+		document.getElementById("winner").innerHTML = "Winner: Tie"; //tie
+	} else if(yourroll == theirroll+2 || yourroll == theirroll-1) {
+		/*
+			1 - 3 > rock beats scissors
+			2 - 1 > paper beats rock
+			3 - 2 > scissors beats paper
+		*/
+		document.getElementById("winner").innerHTML = "Winner: Left"; //left side wins
 	} else {
-		var winner = Boolean(yourroll == theirroll+2 || yourroll == theirroll-1); //true for left, false for right
-		document.getElementById("winner").innerHTML = winner.toString();
-		//if its two more or one less than right they win
-		//1-3 > rock beats scissors
-		//2-1 > paper beats rock
-		//3-2 > scissors beats paper
+		document.getElementById("winner").innerHTML = "Winner: Right"; //right side wins
 	}
 	
 }
