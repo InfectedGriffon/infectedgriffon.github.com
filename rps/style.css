@@ -6,20 +6,18 @@ body {
   justify-content: space-between;
   align-items: stretch;
   height: 100%;
+	text-align: center;
 }
 #yourside {
   width:40%;
   margin-left:6em;
-	text-align: right;
 }
 #theirside {
   width:40%;
   margin-right:6em;
-	text-align: left;
 }
 #middle {
   margin-top:12em;
   margin-left:12em;
   margin-right:12em;
-	text-align: center;
 }
