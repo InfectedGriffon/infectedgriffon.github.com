@@ -10,10 +10,12 @@ body {
 #yourside {
   width:40%;
   margin-left:100px;
+	text-align: right;
 }
 #theirside {
   width:40%;
   margin-right:100px;
+	text-align: left;
 }
 #middle {
   margin-top:200px;
