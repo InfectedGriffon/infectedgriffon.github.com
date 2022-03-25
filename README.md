@@ -1,7 +1,10 @@
 # infectedgriffon.github.com
-current subpages:
 
-- Rock Paper Scissors (/rps)
-- Photography (/photography)
-- Among us (/amongus)
-- Careers (/change)
+### Current Subpages:
+
+| Subpage     | link |
+| ----------- | ----------- |
+| Among us | /amongus |
+| Careers | /change |
+| Photography | /photography |
+| Rock Paper Scissors | /rps |
