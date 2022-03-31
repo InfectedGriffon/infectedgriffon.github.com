@@ -8,3 +8,4 @@
 | Careers | /change |
 | Photography | /photography |
 | Rock Paper Scissors | /rps |
+| post-secondary | /pathways |
