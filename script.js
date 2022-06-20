@@ -19,6 +19,6 @@ var x = setInterval(function() {
   if (distance <= 0) { //once the date has been reaches
     clearInterval(x);
 		document.getElementById("comingsoon").innerHTML = "THE TIME HAS COME."
-  	document.getElementById("timeleft").innerHTML = "APRIL FOOLS IS UPON US";
+  	document.getElementById("timeleft").innerHTML = "IT's MY BIRTHDAY!!!;
   }
 }, 1000);
