@@ -1,11 +1,3 @@
 # infectedgriffon.github.com
 
-### Current Subpages:
-
-| Subpage     | link |
-| ----------- | ----------- |
-| Among us | /amongus |
-| Careers | /change |
-| Photography | /photography |
-| Rock Paper Scissors | /rps |
-| post-secondary | /pathways |
+i have no idea what i'm doing
