@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>InfectedGriffon</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="stylesheet" href="style.css">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#b00b69">
+	<meta name="description" content="Rock Paper Scissors">
+	<meta name="author" content="InfectedGriffon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+</head>
+<body>
+  <div id="container">
+    
+		<div id="yourside">
+      <h2>You threw <span id="youthrew">nothing</span>.</h2>
+			<img id="yourimage" src="images/nothing-red.png">
+    </div>
+
+		<div id="middle">
+			<button id="button" onclick="rps()">Throw</button>
+			<h2 id="winner">Winner: </h2>
+		</div>
+
+    <div id="theirside">
+      <h2>They threw <span id="theythrew">nothing</span>.</h2>
+			<img id="theirimage" src="images/nothing-blue.png">
+    </div>
+
+  </div>
+	<script src="script.js"></script>
+</body>
+</html>
